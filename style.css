@@ -9,48 +9,73 @@ html{
     box-sizing: border-box;
 }
 
-header{
-    margin: 80px;
+body{
+    margin: 50px 100px;
 }
 
 img{
-    width: 200px;
-    height: 150px;
+    width: 150px;
+    height: 100px;
 }
 
-nav{
+header nav{
+    display: grid;
+    grid-template-columns:50px 3fr 70px 50px;
+}
+
+.user{
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+aside nav ul{
+    font-size: 1.5rem;
     display: flex;
-    justify-content: space-between;
-    align-content: space-between;
+    flex-direction: column;
+    width: 20%;
+    margin-top: 20px;
+    background: #fafafa;
+    box-shadow:  20px -20px 60px #d5d5d5, 
+             -20px 20px 60px #ffffff;
+             display: none;
 }
 
-ul{
+li{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between;
-    flex: 1;
-}
-
- li{
-    flex: 1;
+    align-items: center;
     list-style-type: none;
-    font-size: 2rem;
     position: relative;
     cursor: pointer;
+    padding: 8px;
     transition: color .3s;
+
+
 }
 
-li:hover{
+li ion-icon{
+    margin-left: 3px;
+}
+
+li h6{
+    font-size: 1.2rem;
+}
+
+.notification{
+    position: relative;
+}
+
+.notification .badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 5px 5px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+  }
+
+  li:hover{
     color: rgb(218, 214, 214);
-}
-
-li:active{
-    color: grey;
-}
-
-ion-icon{
-    font-size: 2rem;
 }
 
 li::after{
@@ -58,7 +83,7 @@ li::after{
     position:absolute;
     bottom:0;
     left:0;
-    width:30%;
+    width: 30%;
     height:2px; 
     background-color:black;
     transform:scaleX(0);
@@ -72,13 +97,11 @@ li:hover:before, li:hover:after {
     transform:scale(1);
 }
 
- .hamburger{
+.hamburger{
     background-color: transparent;
-    /* font-size: 40px; */
     color: black;
     cursor: pointer;
     border: none;
-     display: none; 
 }
  li::selection{
      outline: none;
@@ -93,47 +116,10 @@ a{
 } 
 
 
-@media screen and (max-width: 767px){
-    .hamburger{
-        display: block;
-        top: 0;
-        left: 0;
-        position: absolute;
-    }
 
-    .cart{
-        top: 0;
-        right: 0;
-        position: absolute;
-
-    }
-
-    li::after{
-        width:60%;
-    }
-
-    li:focus{
-        outline: none;
-    }
-
-    li{
-        display: flex;
-        font-size: 1.5rem;
-        align-items: stretch;
-    }
-
+@media screen and (max-width: 1500px){
     .show{
         width: 100%;
-        display: none;
-    }
-} 
-
-@media screen and (max-width: 460px){
-    li{
-        display: flex;
-        flex-direction: column;
-        font-size: .8rem;
-        align-items: stretch;
-
+        display: display;
     }
 }
