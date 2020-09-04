@@ -38,7 +38,7 @@ ul{
     font-size: 2rem;
     position: relative;
     cursor: pointer;
-    transition: color .3s ease-in-out;
+    transition: color .3s;
 }
 
 li:hover{
@@ -80,7 +80,7 @@ li:hover:before, li:hover:after {
     border: none;
      display: none; 
 }
- .hamburger::selection{
+ li::selection{
      outline: none;
      background-color: transparent;
  }
