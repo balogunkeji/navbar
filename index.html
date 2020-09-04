@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="show" id="show">
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+                <li>Home</li>
+            </ul>
+            <a class="hamburger" id="hamburger">
+                <ion-icon name="menu-outline"></ion-icon>
+            </a>
+            <div class="cart">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </nav>
+    </header>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const show = document.getElementById('show')
+
+        hamburger.addEventListener('click', () => {
+            show.classList.toggle('show');
+        })
+    </script>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</body>
+</html>

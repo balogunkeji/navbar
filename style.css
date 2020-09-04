@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size-adjust: 10px;
+    box-sizing: border-box;
+}
+
+header{
+    margin: 80px;
+}
+
+img{
+    width: 200px;
+    height: 150px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+ul ,li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    flex: 1;
+    list-style-type: none;
+    font-size: 2rem;
+    position: relative;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+li:hover{
+    color: rgb(218, 214, 214);
+}
+
+li:active{
+    color: grey;
+}
+
+ion-icon{
+    font-size: 2rem;
+}
+
+li::after{
+    content: '';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:30%;
+    height:2px; 
+    background-color:black;
+    transform:scaleX(0);
+    transition:all .5s;
+    transform-origin:left;
+}
+
+
+
+li:hover:before, li:hover:after {
+    transform:scale(1);
+}
+
+ .hamburger{
+    background-color: transparent;
+    /* font-size: 40px; */
+    color: black;
+    cursor: pointer;
+    border: none;
+     display: none; 
+}
+
+a{
+    text-decoration: none;
+}
+
+.hamburger:focus, .show:focus{
+    outline: none;
+} 
+
+
+@media screen and (max-width: 767px){
+    .hamburger{
+        display: block;
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    .cart{
+        top: 0;
+        right: 0;
+        position: absolute;
+
+    }
+
+    li::after{
+        width:60%;
+    }
+
+    li:focus{
+        outline: none;
+    }
+
+    li{
+        display: flex;
+        font-size: 1.5rem;
+        align-items: stretch;
+    }
+
+    .show{
+        width: 100%;
+        display: none;
+    }
+} 
+
+@media screen and (max-width: 460px){
+    li{
+        display: flex;
+        flex-direction: column;
+        font-size: .8rem;
+        align-items: stretch;
+
+    }
+}
