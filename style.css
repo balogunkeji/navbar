@@ -24,11 +24,15 @@ nav{
     align-content: space-between;
 }
 
-ul ,li{
+ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
+    flex: 1;
+}
+
+ li{
     flex: 1;
     list-style-type: none;
     font-size: 2rem;
@@ -76,13 +80,16 @@ li:hover:before, li:hover:after {
     border: none;
      display: none; 
 }
-
+ .hamburger::selection{
+     outline: none;
+     background-color: transparent;
+ }
 a{
     text-decoration: none;
 }
 
 .hamburger:focus, .show:focus{
-    outline: none;
+    outline: 0;
 } 
 
 
