@@ -11,6 +11,7 @@ html{
 
 body{
     margin: 50px 100px;
+    overflow: hidden;
 }
 
 img{
@@ -24,15 +25,17 @@ header nav{
 }
 
 .user{
-    font-size: 30px;
+    font-size: 3rem;
     margin-top: 10px;
 }
 
 aside nav ul{
     font-size: 1.5rem;
-    display: flex;
+    padding: 50px;
     flex-direction: column;
-    width: 20%;
+    height: 70vh;
+    max-width: 100%;
+    width: 30%;
     margin-top: 20px;
     background: #fafafa;
     box-shadow:  20px -20px 60px #d5d5d5, 
@@ -45,7 +48,7 @@ li{
     align-items: center;
     list-style-type: none;
     position: relative;
-    cursor: pointer;
+    /* cursor: pointer; */
     padding: 8px;
     transition: color .3s;
 
@@ -100,15 +103,15 @@ li:hover:before, li:hover:after {
 .hamburger{
     background-color: transparent;
     color: black;
-    cursor: pointer;
     border: none;
+    margin-top: -20px;
 }
  li::selection{
      outline: none;
      background-color: transparent;
  }
-a{
-    text-decoration: none;
+button:focus{
+    outline: none;
 }
 
 .hamburger:focus, .show:focus{
@@ -117,9 +120,122 @@ a{
 
 
 
-@media screen and (max-width: 1500px){
-    .show{
-        width: 100%;
-        display: display;
+@media screen and (max-width: 320px){
+    img{
+        width: 50px;
+        height: 30px;
+        margin-top: 9px;
     }
+
+    .user{
+        font-size: .8rem;
+    }
+
+    .user1,.cart{
+        margin-top: 7px;
+    }
+    
+    header nav{
+        display: grid;
+        grid-template-columns:40px 2fr 40px 40px;
+    }
+
+    body{
+        margin: auto;
+    }
+
+    .show{
+        display: flex;
+    }
+
+     .user2{
+        margin-top: 6px;
+    } 
+
+    aside nav ul{
+        font-size: 1.2rem;
+        padding: auto;
+        flex-direction: column;
+        width: 50vw;
+        height: 70vh;
+        margin-top: 20px;
+    }
+
+    li::after{
+        width: 50%;
+    }
+
+    .notification .badge {
+        top: 5px;
+        right: 20px;
+        padding: 2px;
+        border-radius: 50%;
+        background: red;
+        color: white;
+      }
+    
+}
+
+
+@media screen and (max-width: 767px){
+    img{
+        width: 100px;
+        height: 50px;
+        margin-top: 17px;
+    }
+
+    .user{
+        font-size: 1.7rem;
+    }
+
+    .user1,.cart{
+        margin-top: 10px;
+    }
+    
+    header nav{
+        display: grid;
+        grid-template-columns:40px 3fr 50px 50px;
+    }
+
+    body{
+        margin: 30px 40px;
+    }
+
+    .show{
+        display: flex;
+    }
+
+     .user2{
+        margin-top: 5px;
+    } 
+
+    aside nav ul{
+        font-size: 1.5rem;
+        padding: auto;
+        flex-direction: column;
+        width: 50vw;
+        height: 70vh;
+        margin-top: 20px;
+    }
+
+    li::after{
+        width: 50%;
+    }
+
+    .notification .badge {
+        top: 5px;
+        right: 20px;
+        padding: 2px;
+        border-radius: 50%;
+        background: red;
+        color: white;
+      }
+    
+}
+
+@media screen and (min-width: 767px){
+    .show{
+        display: flex;
+    }
+
 }
