@@ -24,8 +24,8 @@ img{
     color: black;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
-    /* display: none; */
+    margin-top: 10px;
+    display: none;
 }
 
 .openbtn .user{
@@ -38,7 +38,7 @@ img{
 
 header nav{
     display: grid;
-    grid-template-columns: 3fr 5fr;
+    grid-template-columns: 2fr 3fr;
     width: 100vw;
     z-index: 1;
     height: 100px;
@@ -49,7 +49,7 @@ header nav{
 
 .ul{
     display: grid;
-    grid-template-columns: 
+    grid-template-columns: repeat(6,150px);
     list-style: none;
 }
 
@@ -96,6 +96,16 @@ header nav{
     background-image: linear-gradient(to right top, #ff69b4, #ff707e, #ff953f, #f5c200, #a8eb12);
   }
 
+  .grid, .nav-img{
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+  }
+
+  .nav-img img{
+      align-self: center;
+  }
+
 .user1, .cart{
     font-size: 2rem;
     margin-top: 29px;
@@ -132,23 +142,22 @@ header nav{
     .openbtn .user{
         font-size: 2rem;
     }
-    
-    
-    header nav{
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        width: 100vw;
-        z-index: 1;
-        height: fit-content;
-        background-attachment: fixed;
-        background-color: white;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    .openbtn{
+        display: block;
     }
     
+    .li{
+        display: none;
+    }
+
     .grid{
         display: grid;
-        grid-template-columns: 35px 35px;
+        grid-template-columns: 50px 1fr;
+        margin-left: 60px;
+        margin-top: 10px;
     }
+  
     
     .user1, .cart{
         font-size: 1.5rem;
