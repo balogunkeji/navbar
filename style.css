@@ -191,22 +191,32 @@ header nav{
       
       .side{
           display: flex;
+          justify-content: space-between;
           position: absolute;
           top: 0;
-          right: 25px;
-          /* margin-left: 50px; */
+      }
+
+      .side img{
+          padding-left: 50px;
       }
       .sidebar .closebtn {
         position: absolute;
         top: 0;
         font-size: 36px;
+        margin-top: 9px;
         align-self: center;
       }
       
+      #body{
+          background-color: rgba(0,0,0,0.2);
+          z-index: 9;
+          width: 100vw;
+          height: 100vh;
+      }
       
       #main {
         transition: margin-left .5s;
-        padding: 20px;
+        /* padding: 20px; */
         display: block;
       }
       

@@ -4,12 +4,13 @@ const close= document.getElementById('closeBtn');
 // const main= document.getElementById('main');
 
 sidebar.addEventListener('click', function sideBar(){
-    document.getElementById('mySidebar').style.width = '90vw';
-    document.getElementById('main').style.marginLeft = '90vw'
+    document.getElementById('mySidebar').style.width = '70vw';
+    document.getElementById('main').style.marginLeft = '70vw';
 
 })
 
 close.addEventListener('click', function closeBtn(){
     document.getElementById('mySidebar').style.width = '0';
-    // main[0].hover.marginLeft='40vw'
+    document.getElementById('main').style.marginLeft = '0'
+
 })
