@@ -25,6 +25,7 @@ img{
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    /* display: none; */
 }
 
 .openbtn .user{
@@ -37,7 +38,7 @@ img{
 
 header nav{
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 5fr;
     width: 100vw;
     z-index: 1;
     height: 100px;
@@ -48,7 +49,7 @@ header nav{
 
 .ul{
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: 
     list-style: none;
 }
 
@@ -117,7 +118,6 @@ header nav{
   .sidebar,#main{
       display: none;
   }
-
   @media screen and (max-width: 767px){
 
     .dpn{
@@ -133,10 +133,6 @@ header nav{
         font-size: 2rem;
     }
     
-    
-    .dropdown:hover .dropdown-content {
-        display: none;
-    }
     
     header nav{
         display: grid;
@@ -208,13 +204,6 @@ header nav{
         font-size: 36px;
         margin-top: 9px;
         align-self: center;
-      }
-      
-      #body{
-          background-color: rgba(0,0,0,0.2);
-          z-index: 9;
-          width: 100vw;
-          height: 100vh;
       }
       
       #main {
