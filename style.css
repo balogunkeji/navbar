@@ -35,62 +35,65 @@ img{
     outline: none;
 }
 
-.dropdown{
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content li, .show-content li{
-    display: flex;
-    font-size: 2rem;
-    text-transform: capitalize;
-    list-style-type: none;
-    padding: 12px 18px;
-}
-
-.dpn{
-    padding: 0 150px;
-}
-
-.dropdown-content li ion-icon, .show-content li ion-icon{
-    font-size: 1rem;
-    align-self: center;
-    padding-right: 7px;
-}
-
-.dropdown-content{
-    display: none;
-    margin-top: 10px;
-    position: absolute;
-    background-color: whitesmoke;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    width: 25vw;
-    height: fit-content;
-}
-
-.dropdown-content li:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 header nav{
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 2fr 3fr;
     width: 100vw;
     z-index: 1;
-    height: fit-content;
+    height: 100px;
     background-attachment: fixed;
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.grid{
+.ul{
     display: grid;
-    grid-template-columns: 50px 50px;
+    grid-template-columns: repeat(6,1fr);
+    list-style: none;
 }
+
+.li{
+    font-size: 1.6rem;
+    margin-top: 29px;
+    transition: color .5s;
+    cursor: pointer;
+}
+
+.li:hover{
+    color: palevioletred;
+}
+
+.link::after{
+    content: '';
+    position: relative;
+   margin-top: 5px;
+    width: 0;
+    display: block;
+    
+    height: 3px;
+   transition: width .2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+   background-image: linear-gradient(to right top, #2d2b91, #0062c2, #0092dd, #00c0e6, #12ebe6);
+  }
+  
+  .link:hover::after{
+    width: 60px;
+  }
+  
+  .link:hover::before{
+    width: 60px;
+  }
+  
+  .link::before{
+    position: absolute;
+    top: 28px;
+    content: '';
+   margin-bottom: 5px;
+    width: 0;
+    display: block;
+    height: 3px;
+   transition: width .40s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+    background-image: linear-gradient(to right top, #ff69b4, #ff707e, #ff953f, #f5c200, #a8eb12);
+  }
 
 .user1, .cart{
     font-size: 2rem;
@@ -104,7 +107,7 @@ header nav{
 .notification .badge {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     padding: 2px 2px;
     border-radius: 50%;
     background: red;
