@@ -8,11 +8,25 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div  class="sidebar" id="mySidebar">
+        <div class="side">
+            <img src="download.jpg" alt="">
+            <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
+        </div>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+      
+      <div id="main">
+      </div>
     <header>
-        <nav>
+        <nav class="dpn">
             <div class="grid">
                 <div class="dropdown">
-                    <button class="hamburger user2" id="hamburger" >
+                    <button class="openbtn" id="openBtn">
                         <ion-icon name="menu-outline" class="user"></ion-icon>
                     </button>
                     <nav>
@@ -58,66 +72,8 @@
         </nav>
     </header>
 
-     <aside>
-        <nav>
-            <ul class="show" id="show">
-                <li>
-                    <ion-icon name="albums-outline"></ion-icon>
-                    <h6>home</h6>
-                </li>
-                <li>
-                    <ion-icon name="albums-outline"></ion-icon>
-                    <h6>home</h6>
-                </li>
-                <li>
-                    <ion-icon name="albums-outline"></ion-icon> 
-                    <h6>home</h6>
-                </li>
-                <li>
-                    <ion-icon name="albums-outline"></ion-icon> 
-                    <h6>home</h6>
-                </li>
-                <li>
-                    <ion-icon name="albums-outline"></ion-icon>
-                    <h6>home</h6>
-                </li>
-
-            </ul>
-        </nav>
-
-        <div id="main"></div>
-    </aside>
-
-    <!-- <nav>
-        <ul class="myside" id="mySide">
-            <li class="side">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <img src="download.jpg" alt="logo">
-            </li>
-            <li>
-                <ion-icon name="albums-outline"></ion-icon>
-                <h6>home</h6>
-            </li>
-            <li>
-                <ion-icon name="albums-outline"></ion-icon>
-                <h6>home</h6>
-            </li>
-            <li>
-                <ion-icon name="albums-outline"></ion-icon> 
-                <h6>home</h6>
-            </li>
-            <li>
-                <ion-icon name="albums-outline"></ion-icon> 
-                <h6>home</h6>
-            </li>
-            <li>
-                <ion-icon name="albums-outline"></ion-icon>
-                <h6>home</h6>
-            </li>
-
-        </ul>
-</nav> -->
-
+     
+   
 
 
     <script src="script.js"></script>
